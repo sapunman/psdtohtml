@@ -1,0 +1,135 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300;400;500&display=swap");
+/* VARIABLES */
+:root {
+  --headline-fnt: "Oswald", sans-serif;
+  --subtitle-fnt: "Open Sans", sans-serif;
+  --fontSize: 16px;
+  --fntCrl: #111111;
+  --fntShadow: #11111186;
+
+  /*colors*/
+  --primary: #ffffff;
+  --secondary: #a5b154;
+  --accents: #292d33;
+  --accents2: #6fafcc;
+  /*transition*/
+  --transition: 0.3s all ease-in-out;
+  /* Borders */
+  --border1: 1px solid black;
+  --border2: 1px solid red;
+}
+/* SETUP */
+html {
+  overflow-x: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headline-fnt);
+}
+a,
+p {
+  font-family: var(--subtitle-fnt);
+}
+
+.container {
+  /* border: var(--border1); */
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1800px;
+}
+.btn {
+  color: var(--primary);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: 1px solid var(--primary);
+  padding: 10px;
+  display: inline-block;
+  transition: var(--transition);
+}
+.btn:hover {
+  background: var(--accents);
+  border-color: var(--accents);
+}
+/*****NAV********/
+nav {
+  border: var(--border1);
+  background: var(--accents2);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+nav .logo {
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+nav .logo:hover {
+  color: rgba(255, 255, 255, 0.561);
+}
+.nav-links a {
+  color: var(--primary);
+  margin: 0 10px;
+  transition: var(--transition);
+}
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.561);
+}
+.burger {
+  /* border: var(--border2); */
+  width: 25px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  display: none;
+}
+.burger span {
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  display: block;
+}
+
+/* header */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(img/beach.jpg);
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px 0;
+}
+header hgroup {
+  /* border: var(--border1); */
+  display: inline-block;
+  letter-spacing: 1.2px;
+  color: var(--primary);
+  text-shadow: 0 0 7px var(--fntShadow);
+}
+.headerTitle h1 {
+  font-size: 4.5rem;
+}
+.headerTitle p:first-child {
+  font-size: 2rem;
+}
+.headerTitle p {
+  font-size: 1.3r;
+  margin-bottom: 30px;
+}
